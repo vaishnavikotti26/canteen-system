@@ -24,7 +24,8 @@ const foods = [
 (async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
-
+console.log("Connected database:", mongoose.connection.name);
+console.log("Food count:", await Food.countDocuments());
     const email = (process.env.ADMIN_EMAIL || 'admin@srkr.edu').toLowerCase();
     let admin = await User.findOne({ email });
     if (!admin) {
