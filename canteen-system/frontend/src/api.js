@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: baseURL: 'https://canteen-system-2026.vercel.app/api'
+  baseURL: baseURL:https://canteen-system-2026-q69a51njs-fsd-f97f.vercel.app/api
 });
 
 // Add authentication token to requests
