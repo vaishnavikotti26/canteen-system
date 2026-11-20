@@ -25,6 +25,7 @@ const foods = [
   try {
     await mongoose.connect(process.env.MONGO_URI);
 console.log("Connected database:", mongoose.connection.name);
+console.log("Connected cluster:", mongoose.connection.host);
 console.log("Food count:", await Food.countDocuments());
     const email = (process.env.ADMIN_EMAIL || 'admin@srkr.edu').toLowerCase();
     let admin = await User.findOne({ email });
